@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Water Management System</title>
+</head>
+<body>
+    <h1>Smart Water Management System</h1>
+    <div>
+        <h2>Water Level Chart</h2>
+        <img src="/chart" alt="Water Level Chart">
+    </div>
+
+    <script>
+        // Example for getting and displaying real-time data (if needed for flow rates)
+        setInterval(function() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Here you can use data to update the chart or other elements
+                });
+        }, 1000);
+    </script>
+</body>
+</html>
